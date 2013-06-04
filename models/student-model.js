@@ -1,0 +1,3 @@
+Student = Backbone.Model.extend ({
+  
+});
