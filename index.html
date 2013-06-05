@@ -6,21 +6,28 @@
 </head>
 <body>
 
+
   <div class="wrapper">
 
-    <h1>Front-End Class Directory</h1>
-    <h3>Spring 2013</h3>
-    
-    <button class="list">List</button>
-    <button class="grid">Grid</button>
-
-    <div class="students"></div>
     <div class="container"></div>
+    <div class="student-list"></div>
+
 
     <!-- Templates -->
 
+    <script id="student-grid-template" type="text/template">
+      <div class="grid-view">
+        <a id="user">
+          <%= photo %>
+          <h4>
+            <%= firstName %> <%= lastName %> <br/> <%= userName %>
+          </h4>
+        </a>
+      </div>
+    </script>
+
     <script id="student-list-template" type="text/template">
-      
+      <a id="user">
         <%= photo %>
         <h4>
           <%= firstName %> <%= lastName %> | <%= userName %>
@@ -28,22 +35,34 @@
         <p>
           <%= bio %>
         </p>
-      
+      </a>
     </script>
 
-    <script id="student-grid-template" type="text/template">
+    <script id="student-detail-template" type="text/template">
+      
+      <h1>
+        <%= firstName %> <%= lastName %>
+      </h1>
+      <h3>
+        <%= userName %>
+      </h3>
       
       <%= photo %>
-      <h4>
-        <%= firstName %> <%= lastName %> <%= userName %>
-      </h4>
       
-    </script>
-
-    <script id="student-list-template" type="text/template">
+      <p>
+        <%= bio %>
+      </p>  
+    
     </script>
 
     <script id="app-template" type="text/template">
+      <h1>Front-End Class Directory</h1>
+      <h3>Spring 2013</h3>
+      <div class="view-toggle">
+        <button class="list">List</button>
+        <button class="grid">Grid</button>
+      </div>
+
     </script>
 
     <!-- Libraries -->
@@ -58,10 +77,10 @@
     <script src="collections/students-collection.js"></script>
     
     <!-- Views -->
-    <script src="views/app-view.js"></script>
     <script src="views/student-list-view.js"></script>
     <script src="views/student-grid-view.js"></script>
     <script src="views/student-detail-view.js"></script>
+    <script src="views/app-view.js"></script>
 
   </div>
 

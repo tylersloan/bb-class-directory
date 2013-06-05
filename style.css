@@ -11,6 +11,11 @@ body {
   padding: 0;
 }
 
+.view-toggle {
+  width: 50%;
+  display: block;
+}
+
 h1 {
 
 }
@@ -30,19 +35,45 @@ h4 {
   margin: 0;
 }
 
+.container h4 {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin: 5% auto;
+  padding: 0;
+}
+
+.container img.thumbnail {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.student-grid {
+  width: 45%;
+  display: inline-block;
+  padding: 1% 2%;
+  margin: 0 auto;
+}
+
+.grid-view {
+  
+}
+
 p {
   display: inline;
   font-family: Helvetica, sans-serif;
   font-size: 13px;
 }
 
-.students {
+.student {
   width: 100%;
+  padding: 3% 1% 3% 0;
 }
 
 .student-list {
   display: inline-block;
-  padding: 3% 1% 3% 0;
 }
 
 img.thumbnail {

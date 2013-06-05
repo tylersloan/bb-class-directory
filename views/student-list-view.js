@@ -4,16 +4,23 @@ StudentListView = Backbone.View.extend({
   className: 'student',
 
   events: {
-
+    'click #user': 'viewDetails'
   },
 
   initialize: function() {
     this.render();
-    $('.students').append(this.$el)
+    $('.student-list').append(this.$el);
   },
 
   render: function() {
-    this.$el.html( studentListView(this.model.attributes) );
+    this.$el.html( studentListTemplate(this.model.attributes) );
+  },
+
+  viewDetails: function() {
+    $('.student-list').html('');
+    new StudentDetailView({
+      model: this.model
+      });
   }
   
 })
