@@ -1,0 +1,3 @@
+StudentDetailView = Backbone.View.extend({
+
+});

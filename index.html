@@ -2,10 +2,68 @@
 <html>
 <head>
   <title>Front-End Class Directory</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-  <script id="list-view-template" type="text/template"></script>
+  <div class="wrapper">
+
+    <h1>Front-End Class Directory</h1>
+    <h3>Spring 2013</h3>
+    
+    <button class="list">List</button>
+    <button class="grid">Grid</button>
+
+    <div class="students"></div>
+    <div class="container"></div>
+
+    <!-- Templates -->
+
+    <script id="student-list-template" type="text/template">
+      
+        <%= photo %>
+        <h4>
+          <%= firstName %> <%= lastName %> | <%= userName %>
+        </h4>
+        <p>
+          <%= bio %>
+        </p>
+      
+    </script>
+
+    <script id="student-grid-template" type="text/template">
+      
+      <%= photo %>
+      <h4>
+        <%= firstName %> <%= lastName %> <%= userName %>
+      </h4>
+      
+    </script>
+
+    <script id="student-list-template" type="text/template">
+    </script>
+
+    <script id="app-template" type="text/template">
+    </script>
+
+    <!-- Libraries -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="http://backbonejs.org/backbone-min.js"></script>
+
+    <!-- Models -->
+    <script src="models/student-model.js"></script>
+
+    <!-- Collections -->
+    <script src="collections/students-collection.js"></script>
+    
+    <!-- Views -->
+    <script src="views/app-view.js"></script>
+    <script src="views/student-list-view.js"></script>
+    <script src="views/student-grid-view.js"></script>
+    <script src="views/student-detail-view.js"></script>
+
+  </div>
 
 </body>
 </html>
